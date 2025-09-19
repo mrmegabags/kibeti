@@ -41,7 +41,7 @@ defmodule KibetiWeb.Router do
   scope "/", KibetiWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", IndexLive
     auth_routes AuthController, Kibeti.Accounts.User, path: "/auth"
     sign_out_route AuthController
 
